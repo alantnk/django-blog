@@ -34,11 +34,7 @@ ALLOWED_HOSTS = string_to_list(config(
     )
 )
 
-CSRF_TRUSTED_ORIGINS = string_to_list(config(
-        'CSRF_TRUSTED_ORIGINS',
-        default='http://localhost,http://127.0.0.1'
-    )
-)
+CSRF_TRUSTED_ORIGINS = ["https://django-blog-14.up.railway.app"]
 
 SITE_ID = 1
 
@@ -141,7 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
