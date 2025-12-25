@@ -36,6 +36,7 @@ ALLOWED_HOSTS = string_to_list(config(
 
 CSRF_TRUSTED_ORIGINS = string_to_list(config(
         'CSRF_TRUSTED_ORIGINS',
+        default='http://localhost,http://127.0.0.1'
     )
 )
 
